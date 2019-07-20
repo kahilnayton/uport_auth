@@ -3,19 +3,25 @@
 
 
 # uport_auth
-A simple log in application that allows a user to log into a website using their credentials stored on uport.
+uPort Auth or simply 'u' is a simple authentication application built on top of uPort identity system. It allows a user to log in with a click of a button and bypass logging in through a centralized third party.
+
+This project is within the usability and dev tooling category for consensus's hackathon.
+This Application is a response to the convenient one click log in offered through third party companies, however since this authentication is built on top of blockchain technology it means the users information isn't stored, used or sold.
+
+Having a lightweight extension that developers can incorporate into their applications will hopefully lead to greater adoption of the technology.
+
+Blockchain technology posed to solve many of the problems currently facing authentication. Creating lightweight apps that make it possible to start implementing this technology is an important step for the space.
 
 
-<!-- ![u_logo](https://user-images.githubusercontent.com/29616227/61584625-e91bf880-ab18-11e9-8427-08bdb51fc5fc.png) -->
 
 
 
-# alternative to google, facebook and twitter
+## Wireframes and Ideas
+an alternative to google, facebook and twitter
 Create a one click authentification so you can keep your information decentralized
 
 <img width="635" alt="u1" src="https://user-images.githubusercontent.com/29616227/61584629-f6d17e00-ab18-11e9-90f3-191e986df9ba.png">
 
-<!-- ![logo_this_others](https://user-images.githubusercontent.com/29616227/61584629-f6d17e00-ab18-11e9-90f3-191e986df9ba.png) -->
 
 
 # No need to enter an email address
