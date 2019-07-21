@@ -5,7 +5,7 @@
 }
 
 .container {
-    border: solid;
+    /* border: solid; */
     height: 100vh;
     background-color: rgb(255, 255, 255);
     /* background: url('') */
@@ -18,5 +18,10 @@
 }
 
 .button-style {
-    border: solid;
+    /* border: solid; */
+}
+
+
+.detail {
+    border: solid grey
 }

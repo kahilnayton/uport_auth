@@ -17,7 +17,8 @@ class App extends React.Component {
 	state = {
 		credentials: "",
 		users: "",
-		status: ""
+		status: "",
+		loggedIn: false
 	};
 
 	Login = e => {
@@ -30,9 +31,10 @@ class App extends React.Component {
 		});
 
 		this.setState({
-			status: "logged in!"
+			status: "logged in!",
+			loggedIn: true
 		});
-		// console.log(this.state.credentials);
+		console.log(this.state.loggedIn);
 		// console.log(this.state.users);
 	};
 
@@ -42,7 +44,7 @@ class App extends React.Component {
 		const credentials = await Credentials.createIdentity();
 		credentials.appName = "App Name";
 
-		store.set('user', { credentials: credentials})
+		store.set('user', { credentials: credentials })
 
 		this.setState({
 			credentials: credentials
@@ -82,18 +84,22 @@ class App extends React.Component {
 					<Divider horizontal></Divider>
 
 					<Button
-						color='teal'
+						color='purple'
 						content='Log in with uPort'
-						icon='add'
+						icon='magnet'
 						labelPosition='left'
 						onClick={this.createID} />
 
-					<ul>
-						<li>App Name : {this.state.credentials.appName}</li>
-						<li>did : {this.state.credentials.did}</li>
-						<li>Private Key : {this.state.credentials.privateKey}</li>
-						<li>Status : {this.state.status}</li>
-					</ul>
+					<div className="detail">
+
+
+
+							<p>App Name : {this.state.credentials.appName}</p>
+							<p>did : {this.state.credentials.did}</p>
+							<p>Private Key : {this.state.credentials.privateKey}</p>
+							{/* <p>Status : {this.state.status}</p> */}
+
+					</div>
 
 				</Segment>
 			</div>
