@@ -23,15 +23,17 @@ Blockchain technology is posed to solve many of the problems currently facing au
 an alternative to google, facebook and twitter
 Create a one click authentification so you can keep your information decentralized
 
+<p align='center'> 
 <img width="635" alt="u1" src="https://user-images.githubusercontent.com/29616227/61584629-f6d17e00-ab18-11e9-90f3-191e986df9ba.png">
-
+</p>
 
 
 # No need to enter an email address
 An alternative to signing in with your email address
+<p align='center'> 
 <img width="635" alt="u1" src="https://user-images.githubusercontent.com/29616227/61584653-795a3d80-ab19-11e9-97c4-c13fd259f3c6.png">
+</p>
 
-<!-- ![login](https://user-images.githubusercontent.com/29616227/61584653-795a3d80-ab19-11e9-97c4-c13fd259f3c6.png) -->
 
 ## built with react 
 React front end running on an express server
@@ -53,37 +55,44 @@ React front end running on an express server
 
 ```JSX
 
-const transports = require("uport-transports").transport;
-const message = require("uport-transports").message.util;
+Login = e => {
+		e.preventDefault();
 
-class App extends React.Component {
-	state = {
-		credentials: ""
+		const credentials = new Credentials({
+			appName: this.state.credentials.appName,
+			did: this.state.credentials.did,
+			privateKey: this.state.credentials.privateKey
+		});
+
+		this.setState({
+			status: "logged in!",
+			loggedIn: true
+		});
+		console.log(this.state.loggedIn);
+		// console.log(this.state.users);
 	};
 
-	Login() {
-		console.log("we are loggin in");
-	}
+	createID = async e => {
+		e.preventDefault();
+
+		const credentials = await Credentials.createIdentity();
+		credentials.appName = "App Name";
+
+		store.set('user', { credentials: credentials })
+
+		this.setState({
+			credentials: credentials
+		});
+	};
 
 	async componentDidMount() {
-		this.setState({
-			credentials: await Credentials.createIdentity()
-		});
-	}
-
-	render() {
-		return (
-			<div>
-				<Button onClick={this.Login}>Login</Button>
-				<div>{this.state.credentials.privateKey}</div>
-			</div>
-		);
-	}
-}
+		fetch("/users")
+			.then(res => res.json())
+			.then(users => {
 
 ```
 
-##
+## npm i uport_auth
 Try the npm package! 
 npm start
 https://www.npmjs.com/package/uport_auth
