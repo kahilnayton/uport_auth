@@ -2,6 +2,7 @@ import React from "react";
 import { Credentials } from "uport-credentials";
 import bodyParser from "body-parser";
 import ngrok from "ngrok";
+import Home from './Home.js'
 import { Button, Divider, Input, Segment, Label } from "semantic-ui-react";
 import './App.css'
 
@@ -56,31 +57,43 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<Segment basic textAlign='center'>
-				
-				<Input
-					action={{ color: 'blue', content: 'Continue' }}
-					iconPosition='left'
-					placeholder='Password'
-				/>
 
-				<Divider horizontal>Or</Divider>
+			<div className="container">
+				<Segment basic textAlign='center'>
 
-				<Button
-					color='teal'
-					content='Log in with uPort'
-					icon='add'
-					labelPosition='left'
-					onClick={this.createID} />
+					<Input
+						action={{ color: 'blue', content: 'Continue' }}
+						iconPosition='left'
+						placeholder='Password'
+					/>
 
-				<ul>
-					<li>App Name : {this.state.credentials.appName}</li>
-					<li>did : {this.state.credentials.did}</li>
-					<li>Private Key : {this.state.credentials.privateKey}</li>
-					<li>Status : {this.state.status}</li>
-				</ul>
+					<Divider horizontal>Or</Divider>
 
-			</Segment>
+					<Button
+						color='red'
+						content='Log in with Google'
+						icon='google'
+						labelPosition='left'
+					/>
+
+					<Divider horizontal></Divider>
+
+					<Button
+						color='teal'
+						content='Log in with uPort'
+						icon='add'
+						labelPosition='left'
+						onClick={this.createID} />
+
+					<ul>
+						<li>App Name : {this.state.credentials.appName}</li>
+						<li>did : {this.state.credentials.did}</li>
+						<li>Private Key : {this.state.credentials.privateKey}</li>
+						<li>Status : {this.state.status}</li>
+					</ul>
+
+				</Segment>
+			</div>
 
 		);
 	}
