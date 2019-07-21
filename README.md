@@ -1,3 +1,5 @@
+[![GitHub issues](https://img.shields.io/github/issues/kahilnayton/uport_auth.svg)](https://github.com/kahilnayton/uport_auth/issues)
+
 
 <img width="635" alt="u1" position="center" src="https://user-images.githubusercontent.com/29616227/61584625-e91bf880-ab18-11e9-8427-08bdb51fc5fc.png">
 
