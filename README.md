@@ -81,6 +81,11 @@ class App extends React.Component {
 
 ```
 
+##
+Try the npm package! 
+npm start
+https://www.npmjs.com/package/uport_auth
+
 
 
 

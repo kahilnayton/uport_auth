@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import ngrok from "ngrok";
 import Home from './Home.js'
 import { Button, Divider, Input, Segment, Label } from "semantic-ui-react";
+import store from 'store'
 import './App.css'
 
 
@@ -40,6 +41,8 @@ class App extends React.Component {
 
 		const credentials = await Credentials.createIdentity();
 		credentials.appName = "App Name";
+
+		store.set('user', { credentials: credentials})
 
 		this.setState({
 			credentials: credentials
