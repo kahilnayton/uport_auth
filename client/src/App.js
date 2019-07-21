@@ -2,7 +2,10 @@ import React from "react";
 import { Credentials } from "uport-credentials";
 import bodyParser from "body-parser";
 import ngrok from "ngrok";
-import { Button, Label } from "semantic-ui-react";
+import { Button, Divider, Input, Segment, Label } from "semantic-ui-react";
+import './App.css'
+
+
 //const express = require("express");
 const decodeJWT = require("did-jwt").decodeJWT;
 const transports = require("uport-transports").transport;
@@ -53,16 +56,31 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<Button onClick={this.createID}>Create Uport ID</Button>
-				<Button onClick={this.Login}>Log into Uport</Button>
+			<Segment basic textAlign='center'>
+				<Input
+					action={{ color: 'blue', content: 'Continue' }}
+					iconPosition='left'
+					placeholder='Password'
+				/>
+
+				<Divider horizontal>Or</Divider>
+
+				<Button
+					color='teal'
+					content='Log in with uPort'
+					icon='add'
+					labelPosition='left'
+					onClick={this.createID} />
+
 				<ul>
 					<li>App Name : {this.state.credentials.appName}</li>
 					<li>did : {this.state.credentials.did}</li>
 					<li>Private Key : {this.state.credentials.privateKey}</li>
 					<li>Status : {this.state.status}</li>
 				</ul>
-			</div>
+				
+			</Segment>
+
 		);
 	}
 }

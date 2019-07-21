@@ -31,10 +31,18 @@ An alternative to signing in with your email address
 <!-- ![login](https://user-images.githubusercontent.com/29616227/61584653-795a3d80-ab19-11e9-97c4-c13fd259f3c6.png) -->
 
 ## built with react 
-React 
+React front end running on an express server
 
 
-## Minimum Viable Product
+## Minimum Viable Product I
+- Create a mock up that uses the uPort login, stores a web token and set state as logged in. 
+
+
+
+### Minimum Viable Product II
+- Create an npm package that a developer can use to implement the u Button in their applications
+
+
 
 
 

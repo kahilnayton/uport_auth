@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    border: solid;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    /* background: url('') */
+}
+
+.button {
+    /* background-color: green; */
+    background-image: url(./images/u_logo.png)
+
+}
+
+.button-style {
+    border: solid;
+}
