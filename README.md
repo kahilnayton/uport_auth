@@ -6,11 +6,12 @@
 uPort Auth or simply 'u' is a simple authentication application built on top of uPort identity system. It allows a user to log in with a click of a button and bypass logging in through a centralized third party.
 
 This project is within the usability and dev tooling category for consensus's hackathon.
-This Application is a response to the convenient one click log in offered through third party companies, however since this authentication is built on top of blockchain technology it means the users information isn't stored, used or sold.
+
+This Application is a response to the convenient 'one click' log in offered through third party companies, however since this authentication is built on top of blockchain technology it means the user's information isn't stored, used or sold.
 
 Having a lightweight extension that developers can incorporate into their applications will hopefully lead to greater adoption of the technology.
 
-Blockchain technology posed to solve many of the problems currently facing authentication. Creating lightweight apps that make it possible to start implementing this technology is an important step for the space.
+Blockchain technology is posed to solve many of the problems currently facing authentication. Creating lightweight apps that make it possible to start implementing this technology is an important step for the space.
 
 
 

@@ -57,6 +57,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<Segment basic textAlign='center'>
+				
 				<Input
 					action={{ color: 'blue', content: 'Continue' }}
 					iconPosition='left'
@@ -78,7 +79,7 @@ class App extends React.Component {
 					<li>Private Key : {this.state.credentials.privateKey}</li>
 					<li>Status : {this.state.status}</li>
 				</ul>
-				
+
 			</Segment>
 
 		);
