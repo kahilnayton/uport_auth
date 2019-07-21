@@ -42,7 +42,7 @@ class App extends React.Component {
 		e.preventDefault();
 
 		const credentials = await Credentials.createIdentity();
-		credentials.appName = "App Name";
+		credentials.appName = "Music that Mum's like";
 
 		store.set('user', { credentials: credentials })
 
@@ -95,8 +95,8 @@ class App extends React.Component {
 
 
 							<p>App Name : {this.state.credentials.appName}</p>
-							<p>did : {this.state.credentials.did}</p>
-							<p>Private Key : {this.state.credentials.privateKey}</p>
+							<h4>DID : {this.state.credentials.did}</h4>
+							<h4>Private Key : {this.state.credentials.privateKey}</h4>
 							{/* <p>Status : {this.state.status}</p> */}
 
 					</div>

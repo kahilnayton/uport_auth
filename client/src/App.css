@@ -17,11 +17,18 @@
 
 }
 
-.button-style {
-    /* border: solid; */
+
+.detail {
+    border: solid grey;
+    /* display: flex; */
+    margin-top: 30px;
+}
+
+.detail p {
+color: rgb(2, 2, 213);
 }
 
 
-.detail {
-    border: solid grey
+.detail h4 {
+color: rgb(97, 0, 103);
 }
